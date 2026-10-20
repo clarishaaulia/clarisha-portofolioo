@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)file:///C:/Users/ASUS/Downloads/Index.html#hero -->
+<html lang="id"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clarisha Aulia — Portofolio Sistem Informasi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./Index_files/css2" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-main: lch(47.89% 70.67 2.17);
+      --bg-card: hsl(341, 38%, 57%);
+      --bg-card-hover: lab(47.82% 35.85 -6.88);
+      --accent: hsl(0, 0%, 100%);
+      --accent-glow: hsl(0, 0%, 97%);
+      --text-main: #ee95c0;
+      --text-muted: #ffffff;
+      --border-color: #f31f70;
+      --font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      font-family: var(--font-family);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(10, 13, 20, 0.85);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: lab(49.78% 65.74 3.58);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: hsl(342, 53%, 35%);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: hsl(0, 44%, 75%);
+      padding: 0.6rem 1.4rem;
+      border-radius: 99px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: background 0.3s, transform 0.2s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border-color);
+      color: hsl(0, 100%, 80%);
+      padding: 0.6rem 1.4rem;
+      border-radius: 99px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: border-color 0.3s, background 0.3s;
+      display: inline-block;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      background: var(--accent-glow);
+    }
+
+    /* Section Global */
+    section {
+      padding: 6rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .section-num {
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .section-title {
+      font-size: 2.25rem;
+      font-weight: 800;
+      margin-bottom: 2rem;
+      line-height: 1.2;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 8rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.2rem;
+      letter-spacing: -1px;
+    }
+
+    .hero-text p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .img-frame {
+      width: 100%;
+      aspect-ratio: 4/5;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .img-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Ringkasan Grid Stats */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .summary-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 1.75rem 1rem;
+      border-radius: 1rem;
+      text-align: center;
+    }
+
+    .summary-val {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .summary-lbl {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 0.25rem;
+    }
+
+    /* Card List (Pengalaman & Proyek) */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 1.25rem;
+      padding: 2.25rem;
+      margin-bottom: 1.5rem;
+      transition: border-color 0.3s;
+    }
+
+    .card:hover {
+      border-color: var(--accent);
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .card-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+    }
+
+    .card-subtitle {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .card-badge {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0.3rem 0.8rem;
+      border-radius: 99px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border: 1px solid var(--border-color);
+    }
+
+    .card-list {
+      list-style-type: disc;
+      padding-left: 1.2rem;
+      color: var(--text-muted);
+    }
+
+    .card-list li {
+      margin-bottom: 0.6rem;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .skill-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 1rem;
+      padding: 1.5rem;
+    }
+
+    .skill-card h4 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: #3a0316;
+    }
+
+    .skill-card p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    /* Tools Ecosystem */
+    .tools-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .tool-tag {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 0.88rem;
+    }
+
+    /* Footer */
+    footer {
+      padding: 3rem 2rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 850px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .summary-grid { grid-template-columns: repeat(2, 1fr); }
+      nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="file:///C:/Users/ASUS/Downloads/Index.html#hero" class="logo">CA<span>.</span></a>
+      <nav>
+        <ul>
+          <li><a href="file:///C:/Users/ASUS/Downloads/Index.html#tentang">Tentang</a></li>
+          <li><a href="file:///C:/Users/ASUS/Downloads/Index.html#pengalaman">Pengalaman</a></li>
+          <li><a href="file:///C:/Users/ASUS/Downloads/Index.html#organisasi">Organisasi</a></li>
+          <li><a href="file:///C:/Users/ASUS/Downloads/Index.html#pendidikan">Pendidikan</a></li>
+          <li><a href="file:///C:/Users/ASUS/Downloads/Index.html#keahlian">Keahlian</a></li>
+          <li><a href="file:///C:/Users/ASUS/Downloads/Index.html#karya">Karya</a></li>
+        </ul>
+      </nav>
+      <a href="file:///C:/Users/ASUS/Downloads/Index.html#kontak" class="btn-primary">Kontak</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <span class="section-num">Sistem Informasi — Fresh Graduate</span>
+        <h1>Clarisha Aulia</h1>
+        <p>Fresh Graduate S1 Sistem Informasi dari Institut Informatika dan Bisnis Darmajaya dengan IPK 3,81. Saat ini sedang menjalankan program Magang HUB sebagai Pengelola Data di Unit Pelayanan Pengadaan RSUPN Dr. Cipto Mangunkusumo, serta berpengalaman dalam pengembangan digitalisasi UMKM dan sistem informasi.</p>
+        <div class="hero-cta">
+          <a href="file:///C:/Users/ASUS/Downloads/Index.html#kontak" class="btn-primary">Hubungi Saya</a>
+          <a href="file:///C:/Users/ASUS/Downloads/Index.html#karya" class="btn-secondary">Lihat Karya</a>
+        </div>
+        <div class="hero-meta">
+          <span>📍 Jakarta / Bandar Lampung</span>
+          <span>🟢 Magang HUB RSCM</span>
+        </div>
+      </div>
+      <div>
+        <div class="img-frame">
+          <!-- Ubah 'images/profil.jpg' sesuai nama file foto Anda di dalam folder 'images' -->
+          <img src="./Index_files/foto-jpg.jpg" alt="Foto Clarisha Aulia" onerror="this.style.display='none'; this.parentElement.innerHTML='&lt;span&gt;[ Foto Profil ]&lt;/span&gt;';">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 — Tentang Saya -->
+  <section id="tentang">
+    <span class="section-num">01 — Tentang Saya</span>
+    <h2 class="section-title">Latar Belakang Profesional</h2>
+    <p style="color: var(--text-muted); max-width: 850px; margin-bottom: 1.5rem;">
+      Saya Clarisha Aulia, lulusan S1 Sistem Informasi dari Institut Informatika dan Bisnis Darmajaya tahun 2026 dengan IPK 3,81. Saat ini saya sedang memperkaya pengalaman profesional melalui program Magang HUB di RSUPN Dr. Cipto Mangunkusumo sebagai Pengelola Data pada bagian Unit Pelayanan Pengadaan (ULP). Selain itu, saya memiliki pengalaman aktif berorganisasi di Bidang Kaderisasi Himpunan Mahasiswa Sistem Informasi (HIMSI) selama dua periode serta aktif dalam pengembangan proyek digitalisasi bagi pelaku UMKM.
+    </p>
+  </section>
+
+  <!-- 02 — Ringkasan Profesional -->
+  <section id="ringkasan">
+    <span class="section-num">02 — Ringkasan Profesional</span>
+    <h2 class="section-title">Ringkasan Utama</h2>
+    <div class="summary-grid">
+      <div class="summary-card">
+        <div class="summary-val">3.81</div>
+        <div class="summary-lbl">IPK Kumulatif</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-val">RSCM</div>
+        <div class="summary-lbl">Magang HUB ULP</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-val">2</div>
+        <div class="summary-lbl">Periode Kaderisasi HIMSI</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-val">S1</div>
+        <div class="summary-lbl">Sistem Informasi</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 — Pengalaman Kerja -->
+  <section id="pengalaman">
+    <span class="section-num">03 — Pengalaman Kerja &amp; Magang</span>
+    <h2 class="section-title">Pengalaman Profesional</h2>
+    
+    <div class="card">
+      <div class="card-meta">
+        <div>
+          <div class="card-title">Pengelola Data — Unit Pelayanan Pengadaan (ULP)</div>
+          <div class="card-subtitle">RSUPN Dr. Cipto Mangunkusumo (Magang HUB)</div>
+        </div>
+        <div class="card-badge">Sedang Berjalan</div>
+      </div>
+      <ul class="card-list">
+        <li>Bertanggung jawab dalam pengelolaan, pencatatan, dan validasi data dokumen pada Unit Pelayanan Pengadaan (ULP).</li>
+        <li>Mendukung digitalisasi administrasi perkantoran, penataan data vendor, serta monitoring dokumen pengadaan barang dan jasa instansi.</li>
+        <li>Mengoptimalkan penggunaan sistem administrasi dan pemanfaatan perangkat digital untuk akurasi pelaporan data di lingkungan rumah sakit.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 04 — Pengalaman Organisasi -->
+  <section id="organisasi">
+    <span class="section-num">04 — Pengalaman Organisasi</span>
+    <h2 class="section-title">Himpunan Mahasiswa Sistem Informasi (HIMSI)</h2>
+    
+    <div class="card">
+      <div class="card-meta">
+        <div>
+          <div class="card-title">Anggota Bidang Kaderisasi</div>
+          <div class="card-subtitle">HIMSI IIB Darmajaya</div>
+        </div>
+        <div class="card-badge">2 Periode Pengurusan</div>
+      </div>
+      <ul class="card-list">
+        <li><strong>Program OREDS:</strong> Menyelenggarakan program pengenalan program studi Sistem Informasi untuk mahasiswa baru, memfasilitasi arahan kurikulum perkuliahan, serta sesi belajar bersama untuk tugas-tugas perkuliahan.</li>
+        <li><strong>Program Panti Binaan:</strong> Mengoordinasikan dan melaksanakan kegiatan sosial pendampingan edukatif serta penyaluran bantuan di panti asuhan binaan.</li>
+        <li><strong>Berbagi Bulan Ramadhan:</strong> Mengelola kegiatan bakti sosial dan penyaluran kepedulian masyarakat selama bulan suci Ramadhan.</li>
+        <li><strong>Pengembangan Organisasi:</strong> Mengelola rekrutmen, bimbingan, dan pembinaan karakter anggota baru HIMSI secara berkelanjutan.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 05 — Pendidikan -->
+  <section id="pendidikan">
+    <span class="section-num">05 — Pendidikan</span>
+    <h2 class="section-title">Riwayat Pendidikan</h2>
+    
+    <div class="card">
+      <div class="card-meta">
+        <div>
+          <div class="card-title">Institut Informatika dan Bisnis Darmajaya</div>
+          <div class="card-subtitle">S1 Sistem Informasi</div>
+        </div>
+        <div class="card-badge">2022 — 2026</div>
+      </div>
+      <p style="color: var(--text-muted);">
+        <strong>IPK: 3,81 / 4,00</strong><br>
+        Fokus studi meliputi analisis dan perancangan sistem informasi, manajemen basis data, optimalisasi layanan digital, serta pengembangan aplikasi terintegrasi.
+      </p>
+    </div>
+  </section>
+
+  <!-- 06 — Keahlian -->
+  <section id="keahlian">
+    <span class="section-num">06 — Keahlian</span>
+    <h2 class="section-title">Kompetensi Pendukung</h2>
+    
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h4>Pengelolaan &amp; Analisis Data</h4>
+        <p>Berpengalaman dalam mengolah, memvalidasi, dan menyusun data administratif instansi secara akurat dan sistematis.</p>
+      </div>
+      <div class="skill-card">
+        <h4>Analisis &amp; Perancangan Sistem</h4>
+        <p>Kemampuan mengidentifikasi kebutuhan sistem, merancang alur kerja, serta menyusun dokumen spesifikasi kebutuhan sistem.</p>
+      </div>
+      <div class="skill-card">
+        <h4>Digitalisasi UMKM &amp; Web Microsite</h4>
+        <p>Mampu merancang dan membangun platform microsite/web untuk membantu promosi dan transformasi digital pelaku usaha lokal.</p>
+      </div>
+      <div class="skill-card">
+        <h4>Komunikasi &amp; Kolaborasi Tim</h4>
+        <p>Terbiasa berkoordinasi lintas divisi serta memfasilitasi kebutuhan koordinasi dalam tim profesional maupun organisasi.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 — Work & Ecosystem -->
+  <section id="tools">
+    <span class="section-num">07 — Work &amp; Ecosystem</span>
+    <h2 class="section-title">Tools &amp; Metodologi</h2>
+    <div class="tools-flex">
+      <span class="tool-tag">Google Workspace</span>
+      <span class="tool-tag">Microsoft Excel / Word / PowerPoint</span>
+      <span class="tool-tag">Google Apps Script</span>
+      <span class="tool-tag">Microsite Development</span>
+      <span class="tool-tag">Manajemen Basis Data</span>
+      <span class="tool-tag">UML Diagram</span>
+      <span class="tool-tag">Dokumentasi &amp; Pelaporan</span>
+    </div>
+  </section>
+
+  <!-- 08 — Karya & Proyek -->
+  <section id="karya">
+    <span class="section-num">08 — Karya &amp; Proyek</span>
+    <h2 class="section-title">Proyek &amp; Skripsi S1</h2>
+    
+    <div class="card" style="margin-bottom: 1.5rem;">
+      <div class="card-meta">
+        <div>
+          <div class="card-title">Digitalisasi UMKM: Pembuatan Website Microsite Raja Snack</div>
+          <div class="card-subtitle">Desa Rajabasa, Kec. Rajabasa, Kab. Lampung Selatan</div>
+        </div>
+        <div class="card-badge">Proyek Digitalisasi</div>
+      </div>
+      <p style="color: var(--text-muted); margin-bottom: 1rem;">
+        Merancang dan mengembangkan website *microsite* informatif untuk UMKM **Raja Snack** di Desa Rajabasa, Kecamatan Rajabasa, Kabupaten Lampung Selatan. Proyek ini bertujuan untuk memperluas jangkauan pemasaran digital, menampilkan katalog produk secara interaktif, serta memudahkan pelanggan dalam mengakses informasi dan melakukan pemesanan secara online.
+      </p>
+      <div class="tools-flex">
+        <span class="tool-tag">Microsite Website</span>
+        <span class="tool-tag">Digitalisasi UMKM</span>
+        <span class="tool-tag">Lampung Selatan</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-meta">
+        <div>
+          <div class="card-title">Pengembangan Smart Library untuk Optimalisasi Layanan Digital</div>
+          <div class="card-subtitle">Studi Kasus: SMA Perintis 2 Bandar Lampung</div>
+        </div>
+        <div class="card-badge">Skripsi S1</div>
+      </div>
+      <p style="color: var(--text-muted); margin-bottom: 1rem;">
+        Merancang dan mengembangkan sistem *Smart Library* berbasis digital untuk memodernisasi layanan perpustakaan di SMA Perintis 2 Bandar Lampung. Sistem ini mempermudah pencarian katalog buku, otomatisasi transaksi sirkulasi peminjaman/pengembalian, serta pencatatan laporan rekapitulasi data secara terstruktur dan efisien.
+      </p>
+      <div class="tools-flex">
+        <span class="tool-tag">Smart Library</span>
+        <span class="tool-tag">Sistem Informasi Digital</span>
+        <span class="tool-tag">SMA Perintis 2</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 — Kontak -->
+  <section id="kontak">
+    <span class="section-num">09 — Kontak</span>
+    <h2 class="section-title">Mari Berkolaborasi</h2>
+    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+      Terbuka untuk peluang penuh waktu, magang lanjutan, maupun kolaborasi proyek di bidang Sistem Informasi dan Pengelolaan Data.
+    </p>
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+      <!-- Ganti nomor WhatsApp dengan nomor Anda (format internasional tanpa tanda +, contoh: 6281234567890) -->
+      <a href="https://wa.me/6285758112825" target="_blank" class="btn-primary">Hubungi via WhatsApp</a>
+      <!-- Ganti email dengan alamat Gmail Anda -->
+      <a href="mailto:clarisha.aulia@gmail.com" class="btn-secondary">Kirim Email</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Clarisha Aulia. Dirancang &amp; dikembangkan dengan dedikasi.</p>
+  </footer>
+
+
+</body></html>
